@@ -7,8 +7,11 @@ Instascan.Camera.getCameras()
 .then(function (cameras) {
   if (cameras.length > 0) {
     console.log('cameras', cameras)
-    // let camSwitch = 
-    scanner.start(cameras[1])
+    // need to toggle camera view between [0] to [1]
+    // let camSwitch = increment
+    let increment = 0
+    // document.getElementById('button1')
+    scanner.start(cameras[increment])
   } else {
     console.error('No cameras found.')
   }
