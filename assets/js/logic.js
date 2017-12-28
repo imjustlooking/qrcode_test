@@ -10,23 +10,23 @@ Instascan.Camera.getCameras()
     // need to toggle camera view between [0] to [1]
     // let camSwitch = increment
     document.getElementById('button1').addEventListener('click',
-    () => {
-      // if (cameras.length > 1) {
-      //   scanner.stop()
-      //   let increment
-      //   let index = 0
-      //   if (index < cameras.length - 1) {
-      //     increment = 1
-      //   }
-      //   if (index === cameras.length - 1) {
-      //     increment = -1
-      //   }
-      //   index += increment
-      //   console.log(increment)
-      //   scanner.start(cameras[index])
-      // } else {
+    function() {
+      if (cameras.length > 1) {
+        scanner.stop()
+        let increment
+        let index = 0
+        if (index < cameras.length - 1) {
+          increment = 1
+        }
+        if (index === cameras.length - 1) {
+          increment = -1
+        }
+        index += increment
+        console.log(increment)
+        scanner.start(cameras[index])
+      } else {
         alert('You only have a single camera')
-      // }
+      }
     })
     scanner.start(cameras[0])
   } else {
