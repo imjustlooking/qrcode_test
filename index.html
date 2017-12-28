@@ -3,17 +3,20 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="assets/css/main.css">
     <title>QR Scanner</title>
   </head>
   <body>
-    <div >
-    <h1 style="display: inline;"> QR Code Scanner </h1>
-    <p style="display: inline;"> by <a href='http://gabrielu.xyz/'>Gabriel</a> with Instascan API </p>
+    <div class='headline'>
+      <h2> QR Code Scanner </h2>
+      <p> by <a href='http://gabrielu.xyz/'>Gabriel</a> w/ Instascan API </p>
     </div>
-    <input id='fill' type='text' style="font-size:25px;" placeholder="Scan content"/><button type='button' id='copy' style='height:35px; vertical-align: bottom;'>Copy</button><button type='button' id='visit' style='height:35px; vertical-align: bottom;'>Visit(url)</button>
-    <button type='button' id='clear' style='height:35px; vertical-align: bottom;'>Clear</button><br>
+    <div class='inputGroup'>
+      <input id='fill' type='text' style="font-size:25px;" placeholder="Scan content"/><button type='button' id='copy' style='height:35px; vertical-align: bottom;'>Copy</button><button type='button' id='visit' style='height:35px; vertical-align: bottom;'>Visit(url)</button>
+      <button type='button' id='clear' style='height:35px; vertical-align: bottom;'>Clear</button>
+    </div>
     <button type="button" id='button1'>Toggle camera</button>
-    <small> * Only for devices w/ multiple cameras & on Chrome browser </small>
+    <small> * Only for multiple cameras + Chrome browser</small>
     <br>
     <video id="preview"></video>
     <script type="text/javascript" src="./assets/js/instascan.min.js"></script>

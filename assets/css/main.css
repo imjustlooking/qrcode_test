@@ -1,0 +1,7 @@
+h2, p {
+  display: inline;
+}
+
+.headline, .inputGroup {
+  margin: 0 0 5px 0
+}
