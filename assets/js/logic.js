@@ -8,7 +8,7 @@ Instascan.Camera.getCameras()
   if (cameras.length === 1) {
     scanner.start(cameras[0])
   } else if (cameras.length > 1) {
-    let index = 0
+    let index = 1
     document.getElementById('button1').addEventListener('click',
     function () {
       scanner.stop()
@@ -21,7 +21,7 @@ Instascan.Camera.getCameras()
         scanner.start(cameras[index])
       }
     })
-    scanner.start(cameras[1])
+    scanner.start(cameras[index])
   } else {
     console.error('No cameras found.')
   }
