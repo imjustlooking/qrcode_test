@@ -5,6 +5,7 @@ scanner.addListener('scan', function (content) {
 })
 Instascan.Camera.getCameras()
 .then(function (cameras) {
+  document.getElementById('fill').value = (cameras.length + ' camera(s)')
   if (cameras.length > 0) {
     console.log('cameras', cameras)
     // need to toggle camera view between [0] to [1]
