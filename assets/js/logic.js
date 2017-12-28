@@ -14,15 +14,15 @@ Instascan.Camera.getCameras()
     function() {
       if (cameras.length > 1) {
         scanner.stop()
-        let increment
+        let increment = 1
         let index = 0
         if (index < cameras.length - 1) {
-          increment = 1
+          index += increment
         }
         if (index === cameras.length - 1) {
-          increment = -1
+          index -= increment
         }
-        index += increment
+        // index += increment
         console.log(increment)
         scanner.start(cameras[index])
       } else {
