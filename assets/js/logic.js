@@ -12,10 +12,10 @@ Instascan.Camera.getCameras()
     // let camSwitch = increment
     let index = 0
     document.getElementById('button1').addEventListener('click',
-    function() {
+    function () {
       // var abc = ['x','y']
-      if (cameras.length > 0) {
-        // scanner.stop()
+      if (cameras.length > 1) {
+        scanner.stop()
         let increment = 1
         if (index < cameras.length - 1) {
           index += increment
@@ -23,8 +23,8 @@ Instascan.Camera.getCameras()
           index -= increment
         }
         // index += increment
-        console.log('index',index)
-        // scanner.start(cameras[index])
+        // console.log('index',index)
+        scanner.start(cameras[index])
       } else {
         alert('You only have a single camera')
       }
