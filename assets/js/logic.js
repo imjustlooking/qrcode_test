@@ -19,12 +19,13 @@ Instascan.Camera.getCameras()
         let increment = 1
         if (index < cameras.length - 1) {
           index += increment
+          scanner.start(cameras[index])
         } else if (index === cameras.length - 1) {
           index -= increment
+          scanner.start(cameras[index])
         }
         // index += increment
         // console.log('index',index)
-        scanner.start(cameras[index])
       } else {
         alert('You only have a single camera')
       }
